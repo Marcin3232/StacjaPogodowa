@@ -12,5 +12,5 @@ It is a student project weather station. On the ESP platform create a mini weath
 <img src="/strona/image/z3.jpg" width="640" height="480" style="float:center">
 #### Website
 ![image](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z4.PNG)
-![image](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z5.PNG)
+![image2](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z5.PNG)
 
