@@ -11,5 +11,6 @@ It is a student project weather station. On the ESP platform create a mini weath
 #### Built sensor
 <img src="/strona/image/z3.jpg" width="640" height="480" style="float:center">
 #### Website
-<img src="/strona/image/z4.PNG" width="1000" height="500" style="float:center">
-<img src="/strona/image/z5.PNG" width="100" height="280" style="float:center">
+![](/strona/image/z4.PNG)
+![](/strona/image/z5.PNG)
+
