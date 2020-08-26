@@ -46,11 +46,11 @@ unsigned long delayTime;
 //polaczenie wifi
 
 const char* ssid="AndroidAP";
-const char* password="1234abcd";
-const char* ssid1="T-Mobile-B528-F48D";
-const char* password1="123asd123";
+const char* password="password";
+const char* ssid1="ssid";
+const char* password1="password";
 ESP8266WebServer server(80);
-const char* host="192.168.43.92";
+const char* host="192.158.43.22";
 
 /////////////////////////////////////////
 
