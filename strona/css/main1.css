@@ -1,0 +1,274 @@
+body {
+    font-family: Garamond;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+    background-image: radial-gradient(circle, #ffffff, #e7e6e7, #d0cecf, #bab6b7, #a49f9f);
+}
+
+.container-fluid {
+    height: auto;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+    color: black;
+    box-shadow: 1px 1px 5px;
+}
+
+.row1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    top: 10px;
+    left: 10%;
+    right: 10%;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    font-size: 24px;
+    color: black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+}
+
+.edit {
+    color: White;
+    margin: 5%;
+}
+
+.edit1 {
+    color: White;
+    margin: 5%;
+}
+
+.card {
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: white;
+}
+
+.col-md-8 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    top: 10px;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    font-size: 24px;
+    color: black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.col-md-4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    top: 10px;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    font-size: 24px;
+    color: black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.p {
+    position: left;
+    margin: 10px;
+}
+
+.tekst {
+    position: right;
+    margin: 20px;
+    color: white;
+    font-size: 34px;
+}
+
+.pasek {
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 7px;
+    top: 10px;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.pasek1 {
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    height: 7px;
+    top: 10px;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.list-group-item {
+    width: auto;
+    height: auto;
+    top: 10px;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.form-inline {
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.ramka {
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+}
+
+.ramka1 {
+    min-width: 150px;
+    width: auto;
+    height: auto;
+    background-image: radial-gradient(circle, #f40000, #f20404, #ef0808, #ed0c0c, #ea0f0f, #e30e11, #db0d13, #d40d14, #c60915, #b80615, #ab0415, #9d0314);
+    color: black;
+    position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+    border-width: thin;
+}
+
+.row2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    top: 10px;
+    left: 10%;
+    right: 10%;
+    background-image: radial-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    font-size: 24px;
+    color: black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+}
+
+#zmien {
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: black;
+    font: white;
+    position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+}
+
+#zmien1 {
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to top, #303030, #3a3a3a, #444444, #4e4e4e, #585858, #606061, #686869, #707172, #76797b, #7d8283, #838a8b, #8a9392);
+    color: white;
+    position: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    box-shadow: 5px 5px 5px;
+}
+
+.czcionka {
+    font-size: 12%;
+    color: white;
+}
