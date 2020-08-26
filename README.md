@@ -9,7 +9,7 @@ It is a student project weather station. On the ESP platform create a mini weath
 
 ## Presentation
 #### Built sensor
-<img src="/strona/image/z3.jpg" width="640" height="480" style="float:center">
+![image3](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z3.PNG)
 #### Website
 ![image](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z4.PNG)
 ![image2](https://github.com/Marcin3232/StacjaPogodowa/blob/master/strona/image/z5.PNG)
