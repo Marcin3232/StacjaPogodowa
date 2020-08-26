@@ -1,4 +1,0 @@
-* linguist-vendored
-*.php linguist-vendored=false
-*.c++ linguist-vendored=false
-
