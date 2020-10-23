@@ -71,30 +71,15 @@ void setup() {
     lcd.setCursor(0,0);
     lcd.print(WiFi.localIP());
     delay(15000);
-  Serial.print(".");
-  lcd.setCursor(0,0);
-  lcd.print("nie polaczono");
+    Serial.print(".");
+    lcd.setCursor(0,0);
+    lcd.print("nie polaczono");
     lcd.setCursor(0,1);
-  lcd.print("Z WiFi");
+    lcd.print("Z WiFi");
     delay(1000);
-    lcd.clear();
-    //  WiFi.begin(ssid1,password1);
-  //if(WiFi.status()==WL_CONNECTED){
-    
- // }
-//  else{
-//        lcd.setCursor(0,0);
-//    lcd.print(WiFi.localIP());
-//    delay(15000);
-//  Serial.print(".");
-//  lcd.setCursor(0,0);
-//  lcd.print("nie polaczono");
- //   lcd.setCursor(0,1);
-//  lcd.print("Z WiFi");
-//    delay(1000);
- //   lcd.clear();
- // }        
+    lcd.clear();    
   }
+  
   Serial.print("IP adress:");
   Serial.println(WiFi.localIP());
   delay(400);
@@ -127,103 +112,98 @@ void setup() {
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print("check wiring!");
-  delay(5000);
-    while (1);
+  delay(5000);    
+  while (1);
+    
   }
-else{
-  Serial.println("-- Default Test --"); lcd.setCursor(0,0); lcd.print("-- Default Test ");}
-  delayTime = 1000;
-  
-  Serial.println();
+  else{
+    Serial.println("-- Default Test --"); lcd.setCursor(0,0); lcd.print("-- Default Test ");}
+    delayTime = 1000;
+    Serial.println();
   /////////////////////////
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Polaczenia sprawdzone");
-  delay(1000);
-  lcd.clear();
+    lcd.clear();
     lcd.setCursor(0,0);
-  lcd.print("Internetowy");
-      lcd.setCursor(0,1);
-  lcd.print("Czujnik");
-  delay(1000);
-  lcd.clear();
-      lcd.setCursor(0,0);
-  lcd.print("Modul WiFi");
-      lcd.setCursor(0,1);
-  lcd.print("ESP8266");
-  delay(1000);
-  lcd.clear();
-        lcd.setCursor(0,0);
-  lcd.print("CZujnik");
-      lcd.setCursor(0,1);
-  lcd.print("BME280");
-  delay(1000);
-  lcd.clear();
+    lcd.print("Polaczenia sprawdzone");
+    delay(1000);
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Internetowy");
+    lcd.setCursor(0,1);
+    lcd.print("Czujnik");
+    delay(1000);
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("Modul WiFi");
+    lcd.setCursor(0,1);
+    lcd.print("ESP8266");
+    delay(1000);
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("CZujnik");
+    lcd.setCursor(0,1);
+    lcd.print("BME280");
+    delay(1000);
+    lcd.clear();
 /////////////////////////////lcd wynik z czujnika/////////////////////////
-  lcd.backlight();
-  lcd.begin(16, 2);
-  lcd.print(WiFi.localIP());
-  lcd.setCursor(0, 0);
-  lcd.print("T=");
-  lcd.setCursor(10,0);
-  lcd.print("H");
-  lcd.setCursor(0, 1);
-  lcd.print("P=");
-  ///////////////////////////////pobieranie czasu////
-  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-  /////////////////////////////
+    lcd.backlight();
+    lcd.begin(16, 2);
+    lcd.print(WiFi.localIP());
+    lcd.setCursor(0, 0);
+    lcd.print("T=");
+    lcd.setCursor(10,0);
+    lcd.print("H");
+    lcd.setCursor(0, 1);
+    lcd.print("P=");
+    ///////////////////////////////pobieranie czasu////
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    /////////////////////////////
 }
 
-char text[13]; 
-void loop() {  
-printValues();
-delay(delayTime);
-//////////czas////////////
-time_t rawtime;
-  struct tm * timeinfo;
-  time (&rawtime);
-  timeinfo = localtime (&rawtime);
-  strftime (buffer,80,"%H:%M",timeinfo);
-  ////////////////////////////
-  String a = buffer;
-  String czujnik1="czujnik nr 1";
-  String a1=md5(a);
+    char text[13]; 
+    void loop() {  
+    printValues();
+    delay(delayTime);
+    //////////czas////////////
+    time_t rawtime;
+    struct tm * timeinfo;
+    time (&rawtime);
+    timeinfo = localtime (&rawtime);
+    strftime (buffer,80,"%H:%M",timeinfo);
+    ////////////////////////////
+    String a = buffer;
+    String czujnik1="czujnik nr 1";
+    String a1=md5(a);
     String ciag= md5(czujnik1);
     String lacz=a1+ciag;
-      Serial.println(buffer);
-  Serial.println(ciag);
-  Serial.println(a);
-  Serial.println(lacz);
-  delay(200);
+    Serial.println(buffer);
+    Serial.println(ciag);
+    Serial.println(a);
+    Serial.println(lacz);
+    delay(200);
 /////////////////////////////////Wysylanie POST///////////////////////////////////////////////
-HTTPClient http;
-  float temperature = bme.readTemperature();  
-  float humidity    = bme.readHumidity();     
-  float pressure    = bme.readPressure()/100.0F;    
-  float altitude_   = bme.readAltitude(1013.25); 
-String temperature1,humidity1,pressure1,ciag1,postData;
-temperature1=String(temperature);
-humidity1=String(humidity);
-pressure1=String(pressure);
-ciag1=String(lacz);
-postData="temperatura="+temperature1+"&wilgotnosc="+humidity1+"&cisnienie="+pressure1+"&ciag="+ciag1;
-http.begin("http://192.168.8.128/projekt/test/czujnik.php");
-http.addHeader("Content-Type","application/x-www-form-urlencoded");
-  int httpCode = http.POST(postData); 
-  String payload = http.getString();
-  Serial.println(httpCode);   
-  Serial.println(payload);     
-  http.end(); 
-  delay(5000);
-////////////////////////////////////////////////////////////Koniec loop///////////////////////////////////////
-/////////////////////////////////////////Rozpaczecie od nowa petli///////////////////////////////////////////
+    HTTPClient http;
+    float temperature = bme.readTemperature();  
+    float humidity    = bme.readHumidity();     
+    float pressure    = bme.readPressure()/100.0F;    
+    float altitude_   = bme.readAltitude(1013.25); 
+    String temperature1,humidity1,pressure1,ciag1,postData;
+    temperature1=String(temperature);
+    humidity1=String(humidity);
+    pressure1=String(pressure);
+    ciag1=String(lacz);
+    postData="temperatura="+temperature1+"&wilgotnosc="+humidity1+"&cisnienie="+pressure1+"&ciag="+ciag1;
+    http.begin("http://192.168.8.128/projekt/test/czujnik.php");
+    http.addHeader("Content-Type","application/x-www-form-urlencoded");
+    int httpCode = http.POST(postData); 
+    String payload = http.getString();
+    Serial.println(httpCode);   
+    Serial.println(payload);     
+    http.end(); 
+    delay(5000);
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////Wyswietlacz LCD////////////////////////////////////////////////
+
 void printValues() {
-
-
+  
   ///////////////////////////////uzmiennnienie danych////////////////////////////////////
   float temperature = bme.readTemperature();  
   float humidity    = bme.readHumidity();     
